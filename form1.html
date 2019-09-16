@@ -1,0 +1,59 @@
+<DOCTYPE! html>
+    <html>
+        <head>
+            <title>login</title>
+            <link href='css/bootstrap.css' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      
+
+            <style type="text/css">
+                
+            </style>
+        </head>
+        <body style='background-color: ghostwhite'>
+            <div class='container'><br>
+            <center><img src="GithubLogo.jpg" alt="Github Logo" width="75px" height="75px"><p style="font-size:35px">Sign In</p></center>
+            <div class='form-group col-md-4 offset-md-4'>
+            <form style="font-family:cursive;font-style: bold" method="post" enctype="multipart/form-data" name="login" onsubmit="return Validate()">
+                <div id="email_div" class='jumbotron' style='margin-top:20px;padding-top:20px;padding-bottom:20px;background-color:white;'>
+                Username or email address<br>
+                    <input  type="text" name="email" id="email" class='form-control'required>                  
+                 
+                    Password<br>
+                <input class="form-control" type="password" name="pwd" id="pwd" required><br>
+                <input class="btn btn-success btn-block" type="submit" value="Sign in">
+            </form>
+            </div>
+            </div>
+            </div>
+            <div class='container'>
+                <div class='form-group col-md-4 offset-md-4'>
+                    <form style="font-family:serif;font-style: bold">
+                        <div class='jumbotron' style='margin-top:10px;padding-top:10px;padding-bottom:10px;padding-left:10px;padding-right: 10px;background-color:white;'>
+                            <input class='btn btn-link' style='float:left-center' type='submit' value='Forgot password?'>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp New..?<input class="btn btn-link"style='float:right' type="submit" value="Sign up">                            
+                    
+                </div>
+                    </form>
+            </div>
+                </div>
+            <script type="text/javascript">
+                function Validate()
+                {
+                    var email=document.forms["login"]["email"].value;
+                    var re =/^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
+                    var x=re.test(email);
+                    if(x)
+                        {
+                            alert("You are loggged in as " + email);
+                            document.write("<p>You are eligible to access the Data.</p>");
+                            document.write("Hello, Mr."+email );
+                        }
+                    else
+                        {
+                            alert("Enter a valid Email ID");
+                        }
+                    
+                }
+            </script>
+        </body>
+    </html>
